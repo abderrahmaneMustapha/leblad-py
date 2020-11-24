@@ -1,18 +1,18 @@
-## Contributing to  algeria natural disaster api 
+## Contributing to leblad py
 
 Contributions are always welcome. Before contributing please read the
-[code of conduct](https://github.com/abderrahmaneMustapha/algeria-api-natural-disaster/blob/main/.github/CODE_OF_CONDUCT.md)
-& [search the issue tracker](https://github.com/abderrahmaneMustapha/algeria-api-natural-disaster/issues);
+[code of conduct](https://github.com/abderrahmaneMustapha/leblad-py/blob/main/.github/CODE_OF_CONDUCT.md)
+& [search the issue tracker](https://github.com/abderrahmaneMustapha/leblad-py/issues);
 your issuemay have already been discussed or fixed in `main`. To contribute, 
-& [send a pull request](https://github.com/abderrahmaneMustapha/algeria-api-natural-disaster/pulls).
+& [send a pull request](https://github.com/abderrahmaneMustapha/leblad-py/pulls).
 
 ## Do you have a suggestion?
 
 Feature requests should be submitted in the
-[issue tracker](https://github.com/abderrahmaneMustapha/algeria-api-natural-disaster/issues/new), with a description of
+[issue tracker](https://github.com/abderrahmaneMustapha/leblad-py/issues/new), with a description of
 the expected behavior & use case.
 Before submitting a request, please search for similar ones in the
-[closed issues](https://github.com/abderrahmaneMustapha/algeria-api-natural-disaster/issues).
+[closed issues](https://github.com/abderrahmaneMustapha/leblad-py/issues).
 
 ## Did you find a bug?
 
@@ -33,7 +33,7 @@ In addition to the following guidelines, please follow the conventions already
 established in the code.
 
 - **Spacing**:<br>
-  Use two spaces for indentation. No tabs.
+  Use four spaces for indentation. No tabs.
 
 - **Naming**:<br>
   Keep variable & method names concise & descriptive.<br>
