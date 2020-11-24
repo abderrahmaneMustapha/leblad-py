@@ -13,7 +13,11 @@ class Api:
         
         return search(self.data, wilaya_code)[0]
     
-
+    def getWilayaByZipCode(self, zip_code):
+        def search(_data, wilaya_code):
+            return list(filter(lambda i :  int(wilaya_code) in   i['postalCodes'], _data))
+    
+        return search(self.data, zip_code)[0]
 
 a  =  Api()
 
