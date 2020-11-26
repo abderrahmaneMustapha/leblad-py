@@ -7,4 +7,4 @@ def GetBaladiyatsFromWilayaObject(dairats, daira):
             return  daira_element["baladyiats"], True
     
     return None, False
-    
+
