@@ -41,7 +41,20 @@ class Api:
         dairats  = [reduceDict(daira, ["baladyiats"]) for daira  in wilaya['dairats']]
         return dairats
 
+    def getDairaByBaladyiaName(self, baladiya):
+        for wilaya in self.data :
+             for daira in wilaya['dairats'] :
+                try : 
+
+                    for _baladiya in daira['baladyiats']:
+                        if  baladiya.lower() in _baladiya['name'].lower():
+                            return daira
+                except KeyError as e:
+                    print("no baladiyats for {}".format(daira['name']))
+                    continue
+
+
 a  =  Api()
-print(a.getDairatsForWilaya(14))
+a.getDairaByBaladyiaName("SENDJAS")
 
 
