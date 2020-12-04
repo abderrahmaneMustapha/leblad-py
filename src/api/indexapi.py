@@ -14,7 +14,7 @@ class Api:
     def getWilayaByCode(self,  wilaya_code):
         def search(_data, wilaya_code):
             return list(filter(lambda i :  i["mattricule"] == wilaya_code, _data))
-        return search(self.data, wilaya_code)[0]
+        return search(self.data, int(wilaya_code))[0]
     
     def getWilayaByZipCode(self, zip_code):
         def search(_data, wilaya_code):
@@ -49,12 +49,26 @@ class Api:
                     for _baladiya in daira['baladyiats']:
                         if  baladiya.lower() in _baladiya['name'].lower():
                             return daira
+
                 except KeyError as e:
                     print("no baladiyats for {}".format(daira['name']))
                     continue
+    
+    def getFirstPhoneCodeForWilaya(self, wilaya_code):
+        phone_code = None
+    
+        try:
+            phone_code = self.getWilayaByCode(wilaya_code)['phoneCodes'][0]
+        except KeyError as e:
+            print("cant get phone code for  wilaya code {}".format(wilaya_code))
+        except IndexError as e:
+            print("phone codes array  for wilaya code {} is empty ".format(wilaya_code))
+        
+
+        return phone_code
 
 
 a  =  Api()
-a.getDairaByBaladyiaName("SENDJAS")
+a.getFirstPhoneCodeForWilaya("5")
 
 
