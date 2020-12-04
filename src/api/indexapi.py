@@ -2,7 +2,7 @@
 import json
 
 #utils
-from  utils import GetBaladiyatsFromWilayaObject
+from  utils import *
 
 class Api:
     data = json.load(open("../../data/WilayaList.json", encoding="utf-8"))
@@ -23,19 +23,25 @@ class Api:
 
     def getBaladyiatsForDaira(self, daira):
         for element in self.data:
-            baladiyats, hasGivenDairaName = GetBaladiyatsFromWilayaObject(element["dairats"], daira)
+            baladiyats, hasGivenDairaName = getBaladiyatsFromWilayaObject(element["dairats"], daira)
             if hasGivenDairaName:
                 return baladiyats
 
     def getBaladyiatsForWilaya(self, wilaya):
         baladiyats_list = []
         for element in self.data:
-            baladiyats, hasGivenDairaName = GetBaladiyatsFromWilayaObject(element["dairats"], wilaya)
+            baladiyats, hasGivenDairaName = getBaladiyatsFromWilayaObject(element["dairats"], wilaya)
             if hasGivenDairaName:
                 baladiyats_list.extend(baladiyats)
 
         return baladiyats_list
+    
+    def getDairatsForWilaya(self, wilaya_code):
+        wilaya = self.getWilayaByCode(wilaya_code)
+        dairats  = [reduceDict(daira, ["baladyiats"]) for daira  in wilaya['dairats']]
+        return dairats
 
 a  =  Api()
+print(a.getDairatsForWilaya(14))
 
 
