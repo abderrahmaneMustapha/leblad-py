@@ -103,13 +103,18 @@ class Api:
     def getZipCodesForWilaya(self, wilaya_code):
         wilaya  =  self.getWilayaByCode(wilaya_code)
         return wilaya["postalCodes"]
+
     def getAdjacentWilaya(self, wilaya_code):
         wilaya = self.getWilayaByCode(wilaya_code)
         return wilaya["adjacentWilayas"]
 
- 
+    def getFullAdjacentWilaya(self, wilaya_code):
+        adjacent_wilaya_ids = self.getAdjacentWilaya(wilaya_code)
+        full_info_about_adjacent_wilaya = [self.getWilayaByCode(__wilaya_code) for __wilaya_code in adjacent_wilaya_ids]
+        return  full_info_about_adjacent_wilaya
+        
 a  =  Api()
-print(a.getAdjacentWilaya(37))
+print(a.getFullAdjacentWilaya(37))
 
 
 
