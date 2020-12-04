@@ -18,7 +18,7 @@ class Api:
     
     def getWilayaByZipCode(self, zip_code):
         def search(_data, wilaya_code):
-            return list(filter(lambda i :  int(wilaya_code) in   i['postalCodes'], _data))
+            return list(filter(lambda i :  int(wilaya_code) in   i["postalCodes"], _data))
         return search(self.data, zip_code)[0]
 
     def getBaladyiatsForDaira(self, daira):
@@ -38,48 +38,58 @@ class Api:
     
     def getDairatsForWilaya(self, wilaya_code):
         wilaya = self.getWilayaByCode(wilaya_code)
-        dairats  = [reduceDict(daira, ["baladyiats"]) for daira  in wilaya['dairats']]
+        dairats  = [reduceDict(daira, ["baladyiats"]) for daira  in wilaya["dairats"]]
         return dairats
 
     def getDairaByBaladyiaName(self, baladiya):
         for wilaya in self.data :
-             for daira in wilaya['dairats'] :
+             for daira in wilaya["dairats"] :
                 try : 
 
-                    for _baladiya in daira['baladyiats']:
-                        if  baladiya.lower() in _baladiya['name'].lower():
+                    for _baladiya in daira["baladyiats"]:
+                        if  baladiya.lower() in _baladiya["name"].lower():
                             return daira
 
                 except KeyError as e:
-                    print("no baladiyats for {}".format(daira['name']))
+                    print("no baladiyats for {}".format(daira["name"]))
                     continue
     
     def getFirstPhoneCodeForWilaya(self, wilaya_code):
         phone_code = None
     
         try:
-            phone_code = self.getWilayaByCode(wilaya_code)['phoneCodes'][0]
+            phone_code = self.getWilayaByCode(wilaya_code)["phoneCodes"][0]
         except KeyError as e:
             print("cant get phone code for  wilaya code {}".format(wilaya_code))
         except IndexError as e:
             print("phone codes array  for wilaya code {} is empty ".format(wilaya_code))
         
-
         return phone_code
 
     def getPhoneCodesForWilaya(self, wilaya_code):
         phone_codes = None
     
         try:
-            phone_codes = self.getWilayaByCode(wilaya_code)['phoneCodes']
+            phone_codes = self.getWilayaByCode(wilaya_code)["phoneCodes"]
         except KeyError as e:
             print("cant get phone code for  wilaya code {}".format(wilaya_code))
         except IndexError as e:
             print("phone codes array  for wilaya code {} is empty ".format(wilaya_code))
         
-      
         return phone_codes
 
+    def getWilayaByBaladyiaName(self, baladiya):
+        for wilaya in self.data :
+             for daira in wilaya["dairats"] :
+                try : 
+
+                    for _baladiya in daira["baladyiats"]:
+                        if  baladiya.lower() in _baladiya["name"].lower():
+                            return wilaya
+
+                except KeyError as e:
+                    print("no baladiyats for {}".format(wilaya["name"]))
+                    continue
 
 a  =  Api()
 
