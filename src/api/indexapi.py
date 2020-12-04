@@ -67,8 +67,21 @@ class Api:
 
         return phone_code
 
+    def getPhoneCodesForWilaya(self, wilaya_code):
+        phone_codes = None
+    
+        try:
+            phone_codes = self.getWilayaByCode(wilaya_code)['phoneCodes']
+        except KeyError as e:
+            print("cant get phone code for  wilaya code {}".format(wilaya_code))
+        except IndexError as e:
+            print("phone codes array  for wilaya code {} is empty ".format(wilaya_code))
+        
+      
+        return phone_codes
+
 
 a  =  Api()
-a.getFirstPhoneCodeForWilaya("5")
+
 
 
