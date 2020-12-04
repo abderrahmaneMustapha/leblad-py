@@ -90,8 +90,16 @@ class Api:
                 except KeyError as e:
                     print("no baladiyats for {}".format(wilaya["name"]))
                     continue
+    
+    def getWilayaByDairaName(self,daira):
+        for wilaya in self.data :
+            for _daira in wilaya["dairats"]:
+                if daira.lower() in _daira["name"].lower():
+                    return  wilaya
+    
 
 a  =  Api()
+
 
 
 
