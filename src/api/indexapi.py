@@ -17,8 +17,8 @@ class Api:
         return search(self.data, int(wilaya_code))[0]
     
     def getWilayaByZipCode(self, zip_code):
-        def search(_data, wilaya_code):
-            return list(filter(lambda i :  int(wilaya_code) in   i["postalCodes"], _data))
+        def search(_data, code):
+            return list(filter(lambda i :  int(code) in   i["postalCodes"], _data))
         return search(self.data, zip_code)[0]
 
     def getBaladyiatsForDaira(self, daira):
@@ -97,9 +97,11 @@ class Api:
                 if daira.lower() in _daira["name"].lower():
                     return  wilaya
     
+    def getWilayasByPhoneCode(self, phone_code):
+        return list(filter(lambda i :  int(phone_code) in   i["phoneCodes"], self.data))
 
 a  =  Api()
-
+print(a.getWilayaByPhoneCode(37))
 
 
 
