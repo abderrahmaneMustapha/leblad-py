@@ -100,8 +100,12 @@ class Api:
     def getWilayasByPhoneCode(self, phone_code):
         return list(filter(lambda i :  int(phone_code) in   i["phoneCodes"], self.data))
 
+    def getZipCodesForWilaya(self, wilaya_code):
+        wilaya  =  self.getWilayaByCode(wilaya_code)
+        return wilaya["postalCodes"]
+    def 
 a  =  Api()
-print(a.getWilayaByPhoneCode(37))
+print(a.getZipCodesForWilaya(37))
 
 
 
