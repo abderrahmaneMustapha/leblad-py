@@ -2,13 +2,13 @@
 import json
 
 #utils
-from  utils import *
+from src.api.utils import *
 
 class Api:
-    data = json.load(open("../../data/WilayaList.json", encoding="utf-8"))
+    data = json.load(open("./data/WilayaList.json", encoding="utf-8"))
     
     def getWilayaList(self):
-        wilaya_list = [ d["name"] for d in self.data ]
+        wilaya_list = [ wilaya["name"] for wilaya in self.data ]
         return  wilaya_list
         
     def getWilayaByCode(self,  wilaya_code):
@@ -113,8 +113,8 @@ class Api:
         full_info_about_adjacent_wilaya = [self.getWilayaByCode(__wilaya_code) for __wilaya_code in adjacent_wilaya_ids]
         return  full_info_about_adjacent_wilaya
         
-a  =  Api()
-print(a.getFullAdjacentWilaya(37))
+
+
 
 
 
