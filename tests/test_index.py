@@ -25,10 +25,16 @@ class TestApi(unittest.TestCase):
         self.assertEqual(len(tested_data),len(expected))
         self.assertEqual(tested_data,expected)
 
+    def test_getWilayaByCode(self):
+        test_cases = self.test_cases.test_cases_getWilayaByCode()
+        for test_case in test_cases:
+            tested_data = self.api.getWilayaByCode(test_case['input'])
+            self.assertEqual(tested_data, test_case['expected'] )
+    
     def test_getWilayaByZipCode(self):
         test_cases = self.test_cases.test_cases_getWilayaByZipCode()
         for test_case in test_cases:
-            tested_data = self.api.getWilayaByCode(test_case['input'])
+            tested_data = self.api.getWilayaByZipCode(test_case['input'])
             self.assertEqual(tested_data, test_case['expected'] )
 
 
