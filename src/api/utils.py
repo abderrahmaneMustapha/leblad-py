@@ -1,6 +1,5 @@
 
 
-
 def getBaladiyatsFromWilayaObject(dairats, daira): 
     for daira_element in dairats:
         if daira.lower()== daira_element["name"].lower():

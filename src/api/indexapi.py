@@ -1,9 +1,8 @@
-#python
 import json
 
 #utils
 from src.api.utils import *
-
+import os
 class Api:
     data = json.load(open("./data/WilayaList.json", encoding="utf-8"))
     

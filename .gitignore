@@ -1,3 +1,5 @@
 .vscode
-leblad_py.egg-info
+lebladpy.egg-info
 dist
+__pycache__
+build
