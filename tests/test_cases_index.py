@@ -2060,7 +2060,7 @@ class TestCases:
     def test_cases_getBaladyiatsForDaira(self):
         cases = [{
             'input':
-            "ADRAR",
+            101,
             'expected': [{
                 "code": 101,
                 "name": "ADRAR",
@@ -2077,10 +2077,47 @@ class TestCases:
                 "name_en": "BOUDA",
                 "name_ar": "بودة"
             }]
-        },
-        {
-            "input":"CHELLALA",
-            "expected":  None
+        }, {
+            "input": 3208,
+            "expected": None
+        }]
+
+        return cases
+
+    def test_cases_getBaladyiatsForWilaya(self):
+        cases = [{
+            'input':
+            1,
+            'expected': [{
+                "code": 101,
+                "name": "ADRAR",
+                "name_en": "ADRAR",
+                "name_ar": "أدرار"
+            }, {
+                "code": 121,
+                "name": "OULED AHMED TIMMI",
+                "name_en": "OULED AHMED TIMMI",
+                "name_ar": "أولاد أحمد تيمي"
+            }, {
+                "code": 122,
+                "name": "BOUDA",
+                "name_en": "BOUDA",
+                "name_ar": "بودة"
+            }]
+        }, {
+            "input":
+            48,
+            "expected": [{
+                "code": 4829,
+                "name": "LAHLEF",
+                "name_en": "LAHLEF",
+                "name_ar": "لحلاف"
+            }, {
+                "code": 4837,
+                "name": "MERDJA SIDI ABED",
+                "name_en": "MERDJA SIDI ABED",
+                "name_ar": "مرجة سيدي عابد"
+            }]
         }]
 
         return cases

@@ -26,13 +26,17 @@ class Api:
             if hasGivenDairaName:
                 return baladiyats
 
+
     def getBaladyiatsForWilaya(self, wilaya):
         baladiyats_list = []
         for element in self.data:
-            baladiyats, hasGivenDairaName = getBaladiyatsFromWilayaObject(element["dairats"], wilaya)
-            if hasGivenDairaName:
-                baladiyats_list.extend(baladiyats)
-
+            if element["mattricule"] == wilaya:
+                 for  dairats in  element["dairats"]:
+                    try : 
+                        for baladiya in dairats["baladyiats"]:
+                            baladiyats_list.append(baladiya)
+                    except KeyError as e :
+                        print("baldiyats doest not exist for this daira")
         return baladiyats_list
     
     def getDairatsForWilaya(self, wilaya_code):

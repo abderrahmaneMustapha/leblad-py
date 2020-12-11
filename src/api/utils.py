@@ -2,7 +2,7 @@
 
 def getBaladiyatsFromWilayaObject(dairats, daira): 
     for daira_element in dairats:
-        if daira.lower()== daira_element["name"].lower():
+        if daira == daira_element["code"] :
             try :
                 return  daira_element["baladyiats"], True
             except KeyError as e:

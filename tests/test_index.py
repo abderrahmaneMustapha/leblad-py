@@ -43,7 +43,13 @@ class TestApi(unittest.TestCase):
         test_cases = self.test_cases.test_cases_getBaladyiatsForDaira()
         for test_case in test_cases:
             tested_data = self.api.getBaladyiatsForDaira(test_case['input'])
-            self.assertEqual(tested_data, test_case['expected'] )
+            self.assertEqual(tested_data, test_case['expected'])
+
+    def test_getBaladyiatsForWilaya(self):
+        test_cases = self.test_cases.test_cases_getBaladyiatsForWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getBaladyiatsForWilaya(test_case['input'])
+            self.assertTrue(any(  elem in test_case['expected']  for elem in tested_data  ))
 
 if __name__ == '__main__':
     unittest.main()
