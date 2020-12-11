@@ -52,5 +52,12 @@ class TestApi(unittest.TestCase):
             for tested_case_element in  test_case['expected'] :
                 self.assertTrue(tested_case_element in tested_data)
 
+    def test_getDairatsForWilaya(self):
+        test_cases = self.test_cases.test_cases_getDairatsForWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getDairatsForWilaya(test_case['input'])
+            for tested_case_element in  test_case['expected'] :
+                self.assertTrue(tested_case_element in tested_data)
+
 if __name__ == '__main__':
     unittest.main()
