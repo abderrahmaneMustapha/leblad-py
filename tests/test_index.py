@@ -49,7 +49,8 @@ class TestApi(unittest.TestCase):
         test_cases = self.test_cases.test_cases_getBaladyiatsForWilaya()
         for test_case in test_cases:
             tested_data = self.api.getBaladyiatsForWilaya(test_case['input'])
-            self.assertTrue(any(  elem in test_case['expected']  for elem in tested_data  ))
+            for tested_case_element in  test_case['expected'] :
+                self.assertTrue(tested_case_element in tested_data)
 
 if __name__ == '__main__':
     unittest.main()

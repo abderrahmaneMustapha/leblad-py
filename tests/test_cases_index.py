@@ -2121,3 +2121,29 @@ class TestCases:
         }]
 
         return cases
+
+    def test_cases_getDairatsForWilaya(self):
+
+        cases = [{
+            'input':
+            1,
+            'expected': [{
+                "code": 101,
+                "name": "ADRAR",
+                "name_ar": "أدرار",
+                "name_en": "ADRAR",
+            }, {
+                "code": 103,
+                "name": "CHAROUINE",
+                "name_ar": "شروين",
+                "name_en": "CHAROUINE",
+            }, {
+                "code": 104,
+                "name": "REGGANE",
+                "name_ar": "رقان",
+                "name_en": "REGGANE"
+            }]
+        },
+        ]
+
+        return cases
