@@ -2057,3 +2057,30 @@ class TestCases:
         }]
         return cases
 
+    def test_cases_getBaladyiatsForDaira(self):
+        cases = [{
+            'input':
+            "ADRAR",
+            'expected': [{
+                "code": 101,
+                "name": "ADRAR",
+                "name_en": "ADRAR",
+                "name_ar": "أدرار"
+            }, {
+                "code": 121,
+                "name": "OULED AHMED TIMMI",
+                "name_en": "OULED AHMED TIMMI",
+                "name_ar": "أولاد أحمد تيمي"
+            }, {
+                "code": 122,
+                "name": "BOUDA",
+                "name_en": "BOUDA",
+                "name_ar": "بودة"
+            }]
+        },
+        {
+            "input":"CHELLALA",
+            "expected":  None
+        }]
+
+        return cases

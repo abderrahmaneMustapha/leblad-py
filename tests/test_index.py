@@ -9,6 +9,8 @@ class TestApi(unittest.TestCase):
     data = json.load(open("./data/WilayaList.json", encoding="utf-8"))
     test_cases = TestCases()
     api = Api()
+    #def testLoop(self, test_cases, func):
+
     def test_getWilayaList(self):
         expected = [
             'Adrar', 'Chlef', 'Laghouat', 'Oum El Bouaghi', 'Batna', 'Béjaïa',
@@ -37,6 +39,11 @@ class TestApi(unittest.TestCase):
             tested_data = self.api.getWilayaByZipCode(test_case['input'])
             self.assertEqual(tested_data, test_case['expected'] )
 
+    def test_getBaladiyatsForDaira(self):
+        test_cases = self.test_cases.test_cases_getBaladyiatsForDaira()
+        for test_case in test_cases:
+            tested_data = self.api.getBaladyiatsForDaira(test_case['input'])
+            self.assertEqual(tested_data, test_case['expected'] )
 
 if __name__ == '__main__':
     unittest.main()
