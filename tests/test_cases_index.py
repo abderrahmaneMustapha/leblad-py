@@ -3,297 +3,234 @@ class TestCases:
         cases = [
             {
                 'input': 1,
-                'expected': {
-                    "mattricule":
-                    1,
-                    "name_ar":
-                    "أدرار",
-                    "name_ber":
-                    "ⴰⴷⵔⴰⵔ",
-                    "name_en":
-                    "Adrar",
-                    "name":
-                    "Adrar",
-                    "phoneCodes": [49],
-                    "postalCodes": [
-                        1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008,
-                        1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017,
-                        1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026,
-                        1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035,
-                        1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044,
-                        1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053,
-                        1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062,
-                        1063, 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071,
-                        1072, 1073, 1074
-                    ],
-                    "dairats": [{
-                        "code":
-                        101,
-                        "name":
-                        "ADRAR",
-                        "name_ar":
-                        "أدرار",
-                        "name_en":
-                        "ADRAR",
-                        "baladyiats": [{
-                            "code": 101,
-                            "name": "ADRAR",
-                            "name_en": "ADRAR",
-                            "name_ar": "أدرار"
-                        }, {
-                            "code": 121,
-                            "name": "OULED AHMED TIMMI",
-                            "name_en": "OULED AHMED TIMMI",
-                            "name_ar": "أولاد أحمد تيمي"
-                        }, {
-                            "code": 122,
-                            "name": "BOUDA",
-                            "name_en": "BOUDA",
-                            "name_ar": "بودة"
-                        }]
+                'expected':{
+                "mattricule": 1,
+                "name_ar": "أدرار",
+                "name_ber": "ⴰⴷⵔⴰⵔ",
+                "name_en": "Adrar",
+                "name": "Adrar",
+                "phoneCodes": [49],
+                "postalCodes": [1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010, 1011, 1012, 1013, 1014, 1015, 1016, 1017, 1018, 1019, 1020, 1021, 1022, 1023, 1024, 1025, 1026, 1027, 1028, 1029, 1030, 1031, 1032, 1033, 1034, 1035, 1036, 1037, 1038, 1039, 1040, 1041, 1042, 1043, 1044, 1045, 1046, 1047, 1048, 1049, 1050, 1051, 1052, 1053, 1054, 1055, 1056, 1057, 1058, 1059, 1060, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1068, 1069, 1070, 1071, 1072, 1073, 1074],
+                "dairats": [{
+                    "code": 101,
+                    "name": "ADRAR",
+                    "name_ar": "أدرار",
+                    "name_en": "ADRAR",
+                    "baladyiats": [{
+                        "code": 101,
+                        "name": "ADRAR",
+                        "name_en": "ADRAR",
+                        "name_ar": "أدرار"
                     }, {
-                        "code":
-                        103,
-                        "name":
-                        "CHAROUINE",
-                        "name_ar":
-                        "شروين",
-                        "name_en":
-                        "CHAROUINE",
-                        "baladyiats": [{
-                            "code": 103,
-                            "name": "CHAROUINE",
-                            "name_en": "CHAROUINE",
-                            "name_ar": "شروين"
-                        }, {
-                            "code": 124,
-                            "name": "TALMINE",
-                            "name_en": "TALMINE",
-                            "name_ar": "طالمين"
-                        }, {
-                            "code": 127,
-                            "name": "OULED AISSA",
-                            "name_en": "OULED AISSA",
-                            "name_ar": "أولاد عيسى"
-                        }]
+                        "code": 121,
+                        "name": "OULED AHMED TIMMI",
+                        "name_en": "OULED AHMED TIMMI",
+                        "name_ar": "أولاد أحمد تيمي"
                     }, {
-                        "code":
-                        104,
-                        "name":
-                        "REGGANE",
-                        "name_ar":
-                        "رقان",
-                        "name_en":
-                        "REGGANE",
-                        "baladyiats": [{
-                            "code": 104,
-                            "name": "REGGANE",
-                            "name_en": "REGGANE",
-                            "name_ar": "رقان"
-                        }, {
-                            "code": 118,
-                            "name": "SALI",
-                            "name_en": "SALI",
-                            "name_ar": "سالي"
-                        }]
+                        "code": 122,
+                        "name": "BOUDA",
+                        "name_en": "BOUDA",
+                        "name_ar": "بودة"
+                    }]
+                }, {
+                    "code": 103,
+                    "name": "CHAROUINE",
+                    "name_ar": "شروين",
+                    "name_en": "CHAROUINE",
+                    "baladyiats": [{
+                        "code": 103,
+                        "name": "CHAROUINE",
+                        "name_en": "CHAROUINE",
+                        "name_ar": "شروين"
                     }, {
-                        "code":
-                        108,
-                        "name":
-                        "TSABIT",
-                        "name_ar":
-                        "تسابيت",
-                        "name_en":
-                        "TSABIT",
-                        "baladyiats": [{
-                            "code": 108,
-                            "name": "TSABIT",
-                            "name_en": "TSABIT",
-                            "name_ar": "تسابيت"
-                        }, {
-                            "code": 126,
-                            "name": "SEBAA",
-                            "name_en": "SEBAA",
-                            "name_ar": "السبع"
-                        }]
+                        "code": 124,
+                        "name": "TALMINE",
+                        "name_en": "TALMINE",
+                        "name_ar": "طالمين"
                     }, {
-                        "code":
-                        109,
-                        "name":
-                        "TIMIMOUN",
-                        "name_ar":
-                        "تيميمون",
-                        "name_en":
-                        "TIMIMOUN",
-                        "baladyiats": [{
-                            "code": 109,
-                            "name": "TIMIMOUN",
-                            "name_en": "TIMIMOUN",
-                            "name_ar": "تيميمون"
-                        }, {
-                            "code": 110,
-                            "name": "OULED SAID",
-                            "name_en": "OULED SAID",
-                            "name_ar": "أولاد السعيد"
-                        }]
+                        "code": 127,
+                        "name": "OULED AISSA",
+                        "name_en": "OULED AISSA",
+                        "name_ar": "أولاد عيسى"
+                    }]
+                }, {
+                    "code": 104,
+                    "name": "REGGANE",
+                    "name_ar": "رقان",
+                    "name_en": "REGGANE",
+                    "baladyiats": [{
+                        "code": 104,
+                        "name": "REGGANE",
+                        "name_en": "REGGANE",
+                        "name_ar": "رقان"
                     }, {
-                        "code":
-                        111,
-                        "name":
-                        "ZAOUIAT KOUNTA",
-                        "name_ar":
-                        "زاوية كنتة",
-                        "name_en":
-                        "ZAOUIAT KOUNTA",
-                        "baladyiats": [{
-                            "code": 105,
-                            "name": "IN ZGHMIR",
-                            "name_en": "IN ZGHMIR",
-                            "name_ar": "إن زغمير"
-                        }, {
-                            "code": 111,
-                            "name": "ZAOUIET KOUNTA",
-                            "name_en": "ZAOUIET KOUNTA",
-                            "name_ar": "زاوية كنتة"
-                        }]
+                        "code": 118,
+                        "name": "SALI",
+                        "name_en": "SALI",
+                        "name_ar": "سالي"
+                    }]
+                }, {
+                    "code": 108,
+                    "name": "TSABIT",
+                    "name_ar": "تسابيت",
+                    "name_en": "TSABIT",
+                    "baladyiats": [{
+                        "code": 108,
+                        "name": "TSABIT",
+                        "name_en": "TSABIT",
+                        "name_ar": "تسابيت"
                     }, {
-                        "code":
-                        112,
-                        "name":
-                        "AOULEF",
-                        "name_ar":
-                        "أولف",
-                        "name_en":
-                        "AOULEF",
-                        "baladyiats": [{
-                            "code": 106,
-                            "name": "TIT",
-                            "name_en": "TIT",
-                            "name_ar": "تيت"
-                        }, {
-                            "code": 112,
-                            "name": "AOULEF",
-                            "name_en": "AOULEF",
-                            "name_ar": "أولف"
-                        }, {
-                            "code": 113,
-                            "name": "TIMEKTEN",
-                            "name_en": "TIMEKTEN",
-                            "name_ar": "تيمقتن"
-                        }, {
-                            "code": 119,
-                            "name": "AKABLI",
-                            "name_en": "AKABLI",
-                            "name_ar": "اقبلي"
-                        }]
+                        "code": 126,
+                        "name": "SEBAA",
+                        "name_en": "SEBAA",
+                        "name_ar": "السبع"
+                    }]
+                }, {
+                    "code": 109,
+                    "name": "TIMIMOUN",
+                    "name_ar": "تيميمون",
+                    "name_en": "TIMIMOUN",
+                    "baladyiats": [{
+                        "code": 109,
+                        "name": "TIMIMOUN",
+                        "name_en": "TIMIMOUN",
+                        "name_ar": "تيميمون"
                     }, {
-                        "code":
-                        115,
-                        "name":
-                        "FENOUGHIL",
-                        "name_ar":
-                        "فنوغيل",
-                        "name_en":
-                        "FENOUGHIL",
-                        "baladyiats": [{
-                            "code": 102,
-                            "name": "TAMEST",
-                            "name_en": "TAMEST",
-                            "name_ar": "تامست"
-                        }, {
-                            "code": 114,
-                            "name": "TAMANTIT",
-                            "name_en": "TAMANTIT",
-                            "name_ar": "تامنطيط"
-                        }, {
-                            "code": 115,
-                            "name": "FENOUGHIL",
-                            "name_en": "FENOUGHIL",
-                            "name_ar": "فنوغيل"
-                        }]
+                        "code": 110,
+                        "name": "OULED SAID",
+                        "name_en": "OULED SAID",
+                        "name_ar": "أولاد السعيد"
+                    }]
+                }, {
+                    "code": 111,
+                    "name": "ZAOUIAT KOUNTA",
+                    "name_ar": "زاوية كنتة",
+                    "name_en": "ZAOUIAT KOUNTA",
+                    "baladyiats": [{
+                        "code": 105,
+                        "name": "IN ZGHMIR",
+                        "name_en": "IN ZGHMIR",
+                        "name_ar": "إن زغمير"
                     }, {
-                        "code":
-                        116,
-                        "name":
-                        "TINERKOUK",
-                        "name_ar":
-                        "تنركوك",
-                        "name_en":
-                        "TINERKOUK",
-                        "baladyiats": [{
-                            "code": 107,
-                            "name": "KSAR KADDOUR",
-                            "name_en": "KSAR KADDOUR",
-                            "name_ar": "قصر قدور"
-                        }, {
-                            "code": 116,
-                            "name": "TINERKOUK",
-                            "name_en": "TINERKOUK",
-                            "name_ar": "تنركوك"
-                        }]
+                        "code": 111,
+                        "name": "ZAOUIET KOUNTA",
+                        "name_en": "ZAOUIET KOUNTA",
+                        "name_ar": "زاوية كنتة"
+                    }]
+                }, {
+                    "code": 112,
+                    "name": "AOULEF",
+                    "name_ar": "أولف",
+                    "name_en": "AOULEF",
+                    "baladyiats": [{
+                        "code": 106,
+                        "name": "TIT",
+                        "name_en": "TIT",
+                        "name_ar": "تيت"
                     }, {
-                        "code":
-                        123,
-                        "name":
-                        "AOUGROUT",
-                        "name_ar":
-                        "أوقروت",
-                        "name_en":
-                        "AOUGROUT",
-                        "baladyiats": [{
-                            "code": 117,
-                            "name": "DELDOUL",
-                            "name_en": "DELDOUL",
-                            "name_ar": "دلدول"
-                        }, {
-                            "code": 120,
-                            "name": "METARFA",
-                            "name_en": "METARFA",
-                            "name_ar": "المطارفة"
-                        }, {
-                            "code": 123,
-                            "name": "AOUGROUT",
-                            "name_en": "AOUGROUT",
-                            "name_ar": "أوقروت"
-                        }]
+                        "code": 112,
+                        "name": "AOULEF",
+                        "name_en": "AOULEF",
+                        "name_ar": "أولف"
                     }, {
-                        "code":
-                        125,
-                        "name":
-                        "BORDJ BADJI MOKHTAR",
-                        "name_ar":
-                        "برج باجي مختار",
-                        "name_en":
-                        "BORDJ BADJI MOKHTAR",
-                        "baladyiats": [{
-                            "code": 125,
-                            "name": "BORDJ BADJI MOKHTAR",
-                            "name_en": "BORDJ BADJI MOKHTAR",
-                            "name_ar": "برج باجي مختار"
-                        }, {
-                            "code": 128,
-                            "name": "TIMIAOUINE",
-                            "name_en": "TIMIAOUINE",
-                            "name_ar": "تيمياوين"
-                        }]
+                        "code": 113,
+                        "name": "TIMEKTEN",
+                        "name_en": "TIMEKTEN",
+                        "name_ar": "تيمقتن"
                     }, {
-                        "code": 1090,
-                        "name": "TIMIMOUN (wilaya déléguée)",
-                        "name_ar": "تيميمون (ولاية منتدبة)",
-                        "name_en": "TIMIMOUN (wilaya déléguée)"
+                        "code": 119,
+                        "name": "AKABLI",
+                        "name_en": "AKABLI",
+                        "name_ar": "اقبلي"
+                    }]
+                }, {
+                    "code": 115,
+                    "name": "FENOUGHIL",
+                    "name_ar": "فنوغيل",
+                    "name_en": "FENOUGHIL",
+                    "baladyiats": [{
+                        "code": 102,
+                        "name": "TAMEST",
+                        "name_en": "TAMEST",
+                        "name_ar": "تامست"
                     }, {
-                        "code":
-                        1250,
-                        "name":
-                        "BORDJ BADJI MOKHTAR (wilaya déléguée)",
-                        "name_ar":
-                        "برج باجي مختار (ولاية منتدبة)",
-                        "name_en":
-                        "BORDJ BADJI MOKHTAR (wilaya déléguée)"
-                    }],
-                    "adjacentWilayas": [37, 8, 32, 3, 47, 11]
-                }
-            },
+                        "code": 114,
+                        "name": "TAMANTIT",
+                        "name_en": "TAMANTIT",
+                        "name_ar": "تامنطيط"
+                    }, {
+                        "code": 115,
+                        "name": "FENOUGHIL",
+                        "name_en": "FENOUGHIL",
+                        "name_ar": "فنوغيل"
+                    }]
+                }, {
+                    "code": 116,
+                    "name": "TINERKOUK",
+                    "name_ar": "تنركوك",
+                    "name_en": "TINERKOUK",
+                    "baladyiats": [{
+                        "code": 107,
+                        "name": "KSAR KADDOUR",
+                        "name_en": "KSAR KADDOUR",
+                        "name_ar": "قصر قدور"
+                    }, {
+                        "code": 116,
+                        "name": "TINERKOUK",
+                        "name_en": "TINERKOUK",
+                        "name_ar": "تنركوك"
+                    }]
+                }, {
+                    "code": 123,
+                    "name": "AOUGROUT",
+                    "name_ar": "أوقروت",
+                    "name_en": "AOUGROUT",
+                    "baladyiats": [{
+                        "code": 117,
+                        "name": "DELDOUL",
+                        "name_en": "DELDOUL",
+                        "name_ar": "دلدول"
+                    }, {
+                        "code": 120,
+                        "name": "METARFA",
+                        "name_en": "METARFA",
+                        "name_ar": "المطارفة"
+                    }, {
+                        "code": 123,
+                        "name": "AOUGROUT",
+                        "name_en": "AOUGROUT",
+                        "name_ar": "أوقروت"
+                    }]
+                }, {
+                    "code": 125,
+                    "name": "BORDJ BADJI MOKHTAR",
+                    "name_ar": "برج باجي مختار",
+                    "name_en": "BORDJ BADJI MOKHTAR",
+                    "baladyiats": [{
+                        "code": 125,
+                        "name": "BORDJ BADJI MOKHTAR",
+                        "name_en": "BORDJ BADJI MOKHTAR",
+                        "name_ar": "برج باجي مختار"
+                    }, {
+                        "code": 128,
+                        "name": "TIMIAOUINE",
+                        "name_en": "TIMIAOUINE",
+                        "name_ar": "تيمياوين"
+                    }]
+                }, {
+                    "code": 1090,
+                    "name": "TIMIMOUN (wilaya déléguée)",
+                    "name_ar": "تيميمون (ولاية منتدبة)",
+                    "name_en": "TIMIMOUN (wilaya déléguée)"
+                }, {
+                    "code": 1250,
+                    "name": "BORDJ BADJI MOKHTAR (wilaya déléguée)",
+                    "name_ar": "برج باجي مختار (ولاية منتدبة)",
+                    "name_en": "BORDJ BADJI MOKHTAR (wilaya déléguée)"
+                }],
+                "adjacentWilayas": [37, 8, 32, 3, 47, 11]
+            }, 
+                        },
             {
                 'input': 2,
                 'expected': {
@@ -1367,7 +1304,7 @@ class TestCases:
         return cases
 
     def test_cases_getWilayaByZipCode(self):
-        cases = [{ "input": 7,
+        cases = [{ "input": 7011,
         "expected" : {
             "mattricule":
             7,
@@ -1685,7 +1622,7 @@ class TestCases:
             }],
             "adjacentWilayas": [17, 28, 5, 40, 39, 30]
         }}, 
-        { "input": 14 ,
+        { "input": 14009 ,
         "expected" :  {
             "mattricule":
             14,
