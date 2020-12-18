@@ -3,8 +3,9 @@ import unittest
 import json
 
 
-from src import Api
+from src.leblad_py import Api
 from tests.test_cases_index import TestCases
+
 class TestApi(unittest.TestCase):
     data = json.load(open("./data/WilayaList.json", encoding="utf-8"))
     test_cases = TestCases()
@@ -31,13 +32,14 @@ class TestApi(unittest.TestCase):
         test_cases = self.test_cases.test_cases_getWilayaByCode()
         for test_case in test_cases:
             tested_data = self.api.getWilayaByCode(test_case['input'])
-            self.assertEqual(tested_data, test_case['expected'] )
+            self.assertEqual(tested_data['mattricule'], test_case['expected']['mattricule'] )
     
     def test_getWilayaByZipCode(self):
         test_cases = self.test_cases.test_cases_getWilayaByZipCode()
         for test_case in test_cases:
+        
             tested_data = self.api.getWilayaByZipCode(test_case['input'])
-            self.assertEqual(tested_data, test_case['expected'] )
+            self.assertEqual(tested_data['mattricule'], test_case['expected']['mattricule'] )
 
     def test_getBaladiyatsForDaira(self):
         test_cases = self.test_cases.test_cases_getBaladyiatsForDaira()
