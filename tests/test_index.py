@@ -3,7 +3,7 @@ import unittest
 import json
 
 
-from src.leblad_py import Api
+from leblad import Api
 from tests.test_cases_index import TestCases
 
 class TestApi(unittest.TestCase):

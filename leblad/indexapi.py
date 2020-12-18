@@ -1,7 +1,7 @@
 import json
 
 #utils
-from src.leblad_py.utils import *
+from leblad.utils import *
 import os
 class Api:
     data = json.load(open("./data/WilayaList.json", encoding="utf-8"))
