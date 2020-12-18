@@ -1,7 +1,5 @@
 .vscode
 lebladpy.egg-info
 dist
-src/__pycache__
-src/api/__pycache__
-tests/__pycache__
+__pycache__
 build
