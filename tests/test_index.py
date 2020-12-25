@@ -1,7 +1,7 @@
 
 import unittest
 import json
-
+import collections
 
 from leblad import Api
 from tests.test_cases_index import TestCases
@@ -67,6 +67,10 @@ class TestApi(unittest.TestCase):
             tested_data = self.api.getFirstPhoneCodeForWilaya(test_case['input'])
             self.assertTrue(test_case['expected'] ==  tested_data)
 
-
+    def test_getPhoneCodesForWilaya(self):
+        test_cases = self.test_cases.test_cases_getPhoneCodesForWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getPhoneCodesForWilaya(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data)
 if __name__ == '__main__':
     unittest.main()

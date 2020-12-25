@@ -2148,3 +2148,23 @@ class TestCases:
         ]
         
         return cases
+
+    def test_cases_getPhoneCodesForWilaya(self):
+        cases = [
+            {'input': 27,
+            'expected': [45]}
+            ,{
+                'input':28,
+                'expected': [35]
+            },
+            {
+                'input':48,
+                'expected': [46]
+            },
+            {
+                'input':47,
+                'expected': [29]
+            },
+        ]
+
+        return cases
