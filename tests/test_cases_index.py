@@ -2168,3 +2168,30 @@ class TestCases:
         ]
 
         return cases
+    
+    def test_cases_getWilayaByBaladyiaName(self):
+        cases = [
+            {
+                'input':"REGGANE",
+                "expected": "Adrar"
+            },
+            {
+                'input':"KSAR EL HIRANE",
+                "expected": "Laghouat"
+            },
+            {
+                'input':"AIN BEIDA",
+                "expected": "Oum El Bouaghi"
+            },
+            {
+                'input':"SERIANA",
+                "expected": "BATNA"
+            },
+            {
+                'input':"MEZERANA",
+                "expected": "Medea"
+            }
+
+        ]
+
+        return cases
