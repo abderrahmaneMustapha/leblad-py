@@ -2126,3 +2126,25 @@ class TestCases:
          "expected": "BENI AZIZ"}]
         
         return cases
+
+    def test_cases_getFirstPhoneCodeForWilaya(self):
+        cases = [
+        {
+            "input": 31,
+            "expected": 41
+        },
+        {
+            "input": 28,  
+            "expected": 35
+        },
+        {
+            "input": 7,  
+            "expected": 33
+        },
+        {
+            "input": 27,
+            "expected": 45
+        }
+        ]
+        
+        return cases
