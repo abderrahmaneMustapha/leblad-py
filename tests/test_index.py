@@ -61,5 +61,10 @@ class TestApi(unittest.TestCase):
             for tested_case_element in  test_case['expected'] :
                 self.assertTrue(tested_case_element in tested_data)
 
+    def test_getDairaByBaladyiaName(self):
+        test_cases = self.test_cases.test_cases_getDairaByBaladyiaName()
+        for test_case in test_cases:
+            tested_data = self.api.getDairaByBaladyiaName(test_case['input'])
+            self.assertTrue(test_case['expected'].lower() ==  tested_data['name'].lower())
 if __name__ == '__main__':
     unittest.main()
