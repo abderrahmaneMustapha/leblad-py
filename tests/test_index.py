@@ -103,5 +103,13 @@ class TestApi(unittest.TestCase):
             tested_data = self.api.getAdjacentWilaya(test_case['input'])
             self.assertTrue(test_case['expected'] ==  tested_data)
     
+    def test_getFullAdjacentWilaya(self):
+        test_cases = self.test_cases.test_cases_getAdjacentWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getFullAdjacentWilaya(test_case['input'])
+            for element in tested_data:
+                _ , value = next(iter(element.items()))
+                self.assertTrue(value in  test_case['expected'])
+
 if __name__ == '__main__':
     unittest.main()

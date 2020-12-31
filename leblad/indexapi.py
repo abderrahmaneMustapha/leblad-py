@@ -26,7 +26,6 @@ class Api:
             if hasGivenDairaName:
                 return baladiyats
 
-
     def getBaladyiatsForWilaya(self, wilaya):
         baladiyats_list = []
         for element in self.data:
