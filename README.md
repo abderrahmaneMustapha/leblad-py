@@ -108,8 +108,7 @@ wilaya = api.getWilayaByPhoneCode(34));
 print(wilaya) # will the wilaya object ({name: "Béjaïa"...})
 ```
 
-#### Testing
-Install unittest 
+## Testing
 
 Simply run
 
