@@ -2112,3 +2112,17 @@ class TestCases:
         ]
 
         return cases
+    
+    def test_cases_getDairaByBaladyiaName(self):
+        cases = [{
+            "input": "DAHMOUNI",
+            "expected": "DAHMOUNI"
+        },
+        {"input": "TOLGA",  
+         "expected": "TOLGA"},
+         {"input": "BELAAS",  
+         "expected": "BATHIA"},
+         {"input": "MAAOUIA",
+         "expected": "BENI AZIZ"}]
+        
+        return cases
