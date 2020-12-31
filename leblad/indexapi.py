@@ -48,14 +48,12 @@ class Api:
         for wilaya in self.data :
              for daira in wilaya["dairats"] :
                 try : 
-
                     for _baladiya in daira["baladyiats"]:
                         if  baladiya.lower() in _baladiya["name"].lower():
                             return daira
 
                 except KeyError as e:
                     print("no baladiyats for {}".format(daira["name"]))
-                    continue
     
     def getFirstPhoneCodeForWilaya(self, wilaya_code):
         phone_code = None
@@ -71,7 +69,6 @@ class Api:
 
     def getPhoneCodesForWilaya(self, wilaya_code):
         phone_codes = None
-    
         try:
             phone_codes = self.getWilayaByCode(wilaya_code)["phoneCodes"]
         except KeyError as e:
@@ -83,16 +80,16 @@ class Api:
 
     def getWilayaByBaladyiaName(self, baladiya):
         for wilaya in self.data :
-             for daira in wilaya["dairats"] :
-                try : 
 
+            for daira in wilaya["dairats"] :
+                try : 
                     for _baladiya in daira["baladyiats"]:
                         if  baladiya.lower() in _baladiya["name"].lower():
                             return wilaya
 
                 except KeyError as e:
-                    print("no baladiyats for {}".format(wilaya["name"]))
-                    continue
+                    print("no baladiyats for {}".format(daira["name"]))
+                
     
     def getWilayaByDairaName(self,daira):
         for wilaya in self.data :
@@ -101,7 +98,8 @@ class Api:
                     return  wilaya
     
     def getWilayasByPhoneCode(self, phone_code):
-        return list(filter(lambda i :  int(phone_code) in   i["phoneCodes"], self.data))
+       
+        return list(filter(lambda i :  int(phone_code) in   i["phoneCodes"], self.data))[0]
 
     def getZipCodesForWilaya(self, wilaya_code):
         wilaya  =  self.getWilayaByCode(wilaya_code)
