@@ -108,6 +108,36 @@ wilaya = api.getWilayaByPhoneCode(34));
 print(wilaya) # will the wilaya object ({name: "Béjaïa"...})
 ```
 
+### getWilayaByDairaName
+
+Takes a daira name and returns the matching wilaya.
+
+**Arguments**
+
+- `dairaName: string` (**required**) the Wilaya's "dairaName" 
+
+**Examples**
+
+```python
+wilaya = api.getWilayaByDairaName("OUED RHIOU")
+print(wilaya) #will print the wilaya object ({name: "Relizane"...})
+```
+
+#### getBaladyiatsForDaira
+
+Takes a daira name and returns the matching baladyiats.
+
+**Arguments**
+
+- `daira: string` (**required**) the Wilaya's "dairaName"
+
+**Examples**
+
+```python
+baladiyats = api.getBaladyiatsForDaira("Tiaret")); 
+print(baladiyats) # will return baladyiats for daira of "Tiaret"
+```
+
 ## Testing
 
 Simply run
