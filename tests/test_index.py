@@ -61,10 +61,55 @@ class TestApi(unittest.TestCase):
             for tested_case_element in  test_case['expected'] :
                 self.assertTrue(tested_case_element in tested_data)
 
-    def test_getDairaByBaladyiaName(self):
-        test_cases = self.test_cases.test_cases_getDairaByBaladyiaName()
+    def test_getFirstPhoneCodeForWilaya(self):
+        test_cases = self.test_cases.test_cases_getFirstPhoneCodeForWilaya()
         for test_case in test_cases:
-            tested_data = self.api.getDairaByBaladyiaName(test_case['input'])
+            tested_data = self.api.getFirstPhoneCodeForWilaya(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data)
+
+    def test_getPhoneCodesForWilaya(self):
+        test_cases = self.test_cases.test_cases_getPhoneCodesForWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getPhoneCodesForWilaya(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data)
+
+    def test_getWilayaByBaladyiaName(self):
+        test_cases = self.test_cases.test_cases_getWilayaByBaladyiaName()
+        for test_case in test_cases:
+            tested_data = self.api.getWilayaByBaladyiaName(test_case['input'])
             self.assertTrue(test_case['expected'].lower() ==  tested_data['name'].lower())
+    
+    def test_getWilayaByDairaName(self):
+        test_cases = self.test_cases.test_cases_getWilayaByDairaName()
+        for test_case in test_cases:
+            tested_data = self.api.getWilayaByDairaName(test_case['input'])['name']
+            self.assertTrue(test_case['expected'] ==  tested_data)
+    
+    def test_getWilayasByPhoneCode(self):
+        test_cases = self.test_cases.test_cases_getWilayasByPhoneCode()
+        for test_case in test_cases:
+            tested_data = self.api.getWilayasByPhoneCode(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data['name'])
+
+    def test_getZipCodesForWilaya(self):
+        test_cases = self.test_cases.test_cases_getZipCodesForWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getZipCodesForWilaya(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data)
+    
+    def test_getAdjacentWilaya(self):
+        test_cases = self.test_cases.test_cases_getAdjacentWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getAdjacentWilaya(test_case['input'])
+            self.assertTrue(test_case['expected'] ==  tested_data)
+    
+    def test_getFullAdjacentWilaya(self):
+        test_cases = self.test_cases.test_cases_getAdjacentWilaya()
+        for test_case in test_cases:
+            tested_data = self.api.getFullAdjacentWilaya(test_case['input'])
+            for element in tested_data:
+                _ , value = next(iter(element.items()))
+                self.assertTrue(value in  test_case['expected'])
+
 if __name__ == '__main__':
     unittest.main()
