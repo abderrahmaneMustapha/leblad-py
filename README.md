@@ -1,6 +1,7 @@
 # Leblad py
-the python version of leblad library,  provide a list of Algerian administrative areas with many useful APIs 
-based on  [dzcode-io/leblad](https://github.com/dzcode-io/leblad)
+
+the python version of leblad library, provide a list of Algerian administrative areas with many useful APIs
+based on [dzcode-io/leblad](https://github.com/dzcode-io/leblad)
 
 ## Getting started
 
@@ -11,6 +12,7 @@ based on  [dzcode-io/leblad](https://github.com/dzcode-io/leblad)
 ```
 pip install leblad
 ```
+
 ## API
 
 ### import
@@ -23,10 +25,11 @@ api   =   leblad.Api()
 
 ### getWilayaList
 
-Returns a list of  algeria provinces or wilayas
-#### Arguments 
+Returns a list of algeria provinces or wilayas
 
-- return  :  Array of Wilaya Object attributes to keep
+#### Arguments
+
+-   return : Array of Wilaya Object attributes to keep
 
 #### Examples
 
@@ -37,11 +40,12 @@ allWilayasDetails = api.getWilayaList()
 ### getWilayaByZipCode
 
 Returns a wilaya that includes the given zipCode
+
 #### Arguments
 
-- `zip_code` number (required) A zip code
-return :  Array of Wilaya Object attributes to keep
-**Examples**
+-   `zip_code` number (required) A zip code
+    return : Array of Wilaya Object attributes to keep
+    **Examples**
 
 ```python
 wilaya = api.getWilayaByZipCode(zip_code)
@@ -53,8 +57,8 @@ Returns a wilaya that includes the given wilaya code (mattricule).
 
 #### Arguments
 
--  `wilaya_code` number (**required**) A zip code
-return :  Array of Wilaya Object attributes to keep
+-   `wilaya_code` number (**required**) A zip code
+    return : Array of Wilaya Object attributes to keep
 
 **Examples**
 
@@ -69,7 +73,7 @@ Takes a wilaya code (matricule) and returns a list of adjacent wilayas codes
 
 **Arguments**
 
-- `wilaya_code` (**required**) the Wilaya's "matricule"
+-   `wilaya_code` (**required**) the Wilaya's "matricule"
 
 **Examples**
 
@@ -84,7 +88,7 @@ Takes a wilaya code (matricule) and returns a list of Respective Zip-Codes for t
 
 **Arguments**
 
-- `wilaya_code` (**required**) the Wilaya's "matricule"
+-   `wilaya_code` (**required**) the Wilaya's "matricule"
 
 **Examples**
 
@@ -99,12 +103,12 @@ Takes a phone code and returns the matching wilaya.
 
 **Arguments**
 
-- `phone_code` (**required**) the Wilaya's "phoneCode"
+-   `phone_code` (**required**) the Wilaya's "phoneCode"
 
 **Examples**
 
 ```python
-wilaya = api.getWilayaByPhoneCode(34)); 
+wilaya = api.getWilayaByPhoneCode(34));
 print(wilaya) # will the wilaya object ({name: "Béjaïa"...})
 ```
 
@@ -114,7 +118,7 @@ Takes a daira name and returns the matching wilaya.
 
 **Arguments**
 
-- `dairaName: string` (**required**) the Wilaya's "dairaName" 
+-   `dairaName: string` (**required**) the Wilaya's "dairaName"
 
 **Examples**
 
@@ -129,15 +133,134 @@ Takes a daira name and returns the matching baladyiats.
 
 **Arguments**
 
-- `daira: string` (**required**) the Wilaya's "dairaName"
+-   `daira: string` (**required**) the Wilaya's "dairaName"
 
 **Examples**
 
 ```python
-baladiyats = api.getBaladyiatsForDaira("Tiaret")); 
+baladiyats = api.getBaladyiatsForDaira("Tiaret"));
 print(baladiyats) # will return baladyiats for daira of "Tiaret"
 ```
 
+### getDairatsForWilaya
+
+Takes a wilaya code (matricule) ans returns list of all dairats of that wilaya.
+
+**Arguments**
+
+-   `wilaya_code: number` (**required**) the Wilaya's "matricule"
+
+**Examples**
+
+```python
+wilaya_dairats = api.getDairatsForWilaya(3)
+print(wilaya_dairats) #returns list of dairats for wilaya 3
+```
+
+### getBaladyiatsForDaira
+
+Takes a daira name and returns the matching baladyiats.
+
+**Arguments**
+
+-   `daira: string` (**required**) the Wilaya's "dairaName" in en|fr|ar
+
+**Examples**
+
+```python
+baladyiats = api.getBaladyiatsForDaira("Adrar")
+print(baladyiats)  # will return baladyiats for daira of "Adrar"
+```
+
+#### getPhoneCodesForWilaya
+
+Takes a wilaya code (matricule) and returns a list of phone codes for given wilaya
+
+**Arguments**
+
+-   `wilaya_code: number` (**required**) the Wilaya's "matricule"
+
+**Examples**
+
+```python
+phones  = api.getPhoneCodesForWilaya(22)
+print(phones) #returns list of phone codes for wilaya 22
+```
+
+#### getFirstPhoneCodeForWilaya
+
+Takes a wilaya code (matricule) and returns the first phone code from a list of phone codes for given wilaya
+
+**Arguments**
+
+-   `wilayaCode: number` (**required**) the Wilaya's "matricule"
+
+**Examples**
+
+```python
+first_phonecode = api.getFirstPhoneCodeForWilaya(16)
+print(first_phonecode) #returns first phone code for wilaya 16
+```
+
+### getBaladyiatsForWilaya
+
+Takes a wilaya code (mattricule) and returns array of Baladiyates of wilaya.
+
+**Arguments**
+
+-   `wilaya_code: number` (**required**) the Wilaya's "matricule"
+
+**Examples**
+
+```python
+wilaya_bladiyats = api.getBaladyiatsForWilaya(31));
+print(wilaya_baladiyats) # will print the baladyiats list ([{ code: 3125, name: 'AIN KERMA'..},{ code: 3105,name: 'ES SENIA',}])
+```
+
+### getWilayaByBaladyiaName
+
+Takes a Baladyia name and returns wilaya in which baladyia is located.
+
+**Arguments**
+
+-   `baladya: number` (**required**) the Baladyia name
+
+**Examples**
+
+```python
+wilaya = api.getWilayaByBaladyiaName('ES SENIA')
+print(wilaya) # will print the wilaya object ({name: "Oran"...})
+```
+
+### getDairaByBaladyiaName
+
+Takes a Baladyia name and returns daira in which baladyia is located.
+
+**Arguments**
+
+-   `baladyia_name: string` (**required**) the Baladyia name
+
+**Examples**
+
+```python
+daira =api.getDairaByBaladyiaName('ES SENIA')
+print(daira) #will print the daira object ({name: "ES SENIA"...})
+```
+
+### getFullAdjacentWilaya
+
+Takes a wilaya code  and returns a list of adjacent wilaya objects
+
+**Arguments**
+
+-   `wilaya_code: integer` (**required**) the wilaya code (matricule)
+
+**Examples**
+
+```python
+adjacent_wilaya_obj =api.getFullAdjacentWilaya('14')
+print(adjacent_wilaya_obj) #will print a list of objects of adjacent wilaya
+```
 ## Testing
 
 Simply run
@@ -148,4 +271,4 @@ python -m unittest tests/test_index.py
 
 ## License
 
-Copyright (c) 2020  Licensed under the MIT license.
+Copyright (c) 2020 Licensed under the MIT license.
