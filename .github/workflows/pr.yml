@@ -22,4 +22,4 @@ jobs:
         python -m unittest tests/test_index.py
     - name: Analysing the code with pylint
       run: |
-        pylint `ls -R|grep .py$|xargs`
+        pylint $(git ls-files '*.py')
