@@ -3,6 +3,11 @@
 the python version of leblad library, provide a list of Algerian administrative areas with many useful APIs
 based on [dzcode-io/leblad](https://github.com/dzcode-io/leblad)
 
+# Meta 
+
+**Coverage** 
+
+[![codecov](https://codecov.io/gh/abderrahmaneMustapha/leblad-py/branch/main/graph/badge.svg?token=G2LWO5YXHB)](https://codecov.io/gh/abderrahmaneMustapha/leblad-py)
 ## Getting started
 
 ### Usage
