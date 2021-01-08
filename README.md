@@ -78,7 +78,7 @@ Takes a wilaya code (matricule) and returns a list of adjacent wilayas codes
 **Examples**
 
 ```python
-adjacent_wilayas = api.getAdjacentWilayas(31)
+adjacent_wilayas = api.getAdjacentWilaya(31)
 print(adjacent_wilayas) # will print [46, 22, 29, 27]
 ```
 
@@ -93,11 +93,11 @@ Takes a wilaya code (matricule) and returns a list of Respective Zip-Codes for t
 **Examples**
 
 ```python
-wilayas_zipcodes = api.getAdjacentWilayas(31)
+wilayas_zipcodes = api.getZipCodesForWilaya(31)
 print(wilayas_zipcodes) #returns list of zip codes for wilaya 31
 ```
 
-#### getWilayaByPhoneCode
+#### getWilayasByPhoneCode
 
 Takes a phone code and returns the matching wilaya.
 
@@ -108,7 +108,7 @@ Takes a phone code and returns the matching wilaya.
 **Examples**
 
 ```python
-wilaya = api.getWilayaByPhoneCode(34));
+wilaya = api.getWilayasByPhoneCode(34)
 print(wilaya) # will the wilaya object ({name: "Béjaïa"...})
 ```
 
@@ -129,16 +129,16 @@ print(wilaya) #will print the wilaya object ({name: "Relizane"...})
 
 #### getBaladyiatsForDaira
 
-Takes a daira name and returns the matching baladyiats.
+Takes a daira code and returns the matching baladyiats.
 
 **Arguments**
 
--   `daira: string` (**required**) the Wilaya's "dairaName"
+-   `daira_code: int` (**required**) the Wilaya's "dairaName"
 
 **Examples**
 
 ```python
-baladiyats = api.getBaladyiatsForDaira("Tiaret"));
+baladiyats = api.getBaladyiatsForDaira(1401)
 print(baladiyats) # will return baladyiats for daira of "Tiaret"
 ```
 
@@ -155,21 +155,6 @@ Takes a wilaya code (matricule) ans returns list of all dairats of that wilaya.
 ```python
 wilaya_dairats = api.getDairatsForWilaya(3)
 print(wilaya_dairats) #returns list of dairats for wilaya 3
-```
-
-### getBaladyiatsForDaira
-
-Takes a daira name and returns the matching baladyiats.
-
-**Arguments**
-
--   `daira: string` (**required**) the Wilaya's "dairaName" in en|fr|ar
-
-**Examples**
-
-```python
-baladyiats = api.getBaladyiatsForDaira("Adrar")
-print(baladyiats)  # will return baladyiats for daira of "Adrar"
 ```
 
 #### getPhoneCodesForWilaya
@@ -213,8 +198,8 @@ Takes a wilaya code (mattricule) and returns array of Baladiyates of wilaya.
 **Examples**
 
 ```python
-wilaya_bladiyats = api.getBaladyiatsForWilaya(31));
-print(wilaya_baladiyats) # will print the baladyiats list ([{ code: 3125, name: 'AIN KERMA'..},{ code: 3105,name: 'ES SENIA',}])
+wilaya_bladiyats = api.getBaladyiatsForWilaya(31)
+print(wilaya_bladiyats) # will print the baladyiats list ([{ code: 3125, name: 'AIN KERMA'..},{ code: 3105,name: 'ES SENIA',}])
 ```
 
 ### getWilayaByBaladyiaName
@@ -259,6 +244,20 @@ Takes a wilaya code  and returns a list of adjacent wilaya objects
 
 ```python
 adjacent_wilaya_obj =api.getFullAdjacentWilaya('14')
+print(adjacent_wilaya_obj) #will print a list of objects of adjacent wilaya
+```
+### getAdjacentWilaya
+
+Takes a wilaya code  and returns a list of adjacent wilayas
+
+**Arguments**
+
+-   `wilaya_code: integer` (**required**) the wilaya code (matricule)
+
+**Examples**
+
+```python
+adjacent_wilaya_obj =api.getAdjacentWilaya('14')
 print(adjacent_wilaya_obj) #will print a list of objects of adjacent wilaya
 ```
 ## Testing
