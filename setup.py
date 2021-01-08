@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="leblad", # Replace with your own username
-    version="0.0.2",
+    version="0.0.3",
     author="Toumi abderrahmane",
     author_email="abderrahmanemustapha030898@gmail.com",
     description="the python version of leblad library,  provide a list of Algerian administrative areas with many useful APIs" 
