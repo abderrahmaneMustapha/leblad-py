@@ -22,4 +22,4 @@ jobs:
         python -m unittest tests/test_index.py
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint --function-naming-style="camelCase" --method-naming-style="camelCase" $(git ls-files './leblad/*.py')
